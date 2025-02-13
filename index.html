@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standing Order Form</title>
+    <link rel="stylesheet" href="form1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <div class="formsection">
+
+        <div class="logoimage">
+            <img src="./Image/Masreq Logo-01.png" alt="">
+        </div>
+        <div class="heading">
+            <h5 class="">Request for Standing Order (Account to Account)</h5>
+            <h6>I/We request you to execute my/our Standing Order as detailed below:</h6>
+        </div>
+        <div class="inputdet">
+            <div>
+                <h2>Donor IBAN/Account No.</h2><input type="text" id="donoraccno">
+                <span class="donoraccnoerror">Account Number required minimum 15 digit</span>
+                <h2>Title</h2><input type="text" id="donortitle">
+                <span class="donortitleerror">type only text</span>
+                
+            </div><br>
+
+            <div>
+                <h2>Recipient IBAN/Account No.</h2><input type="text" id="recipaccno">
+                <span class="recipaccnoerror">type valid account number</span>
+                <h2>Title</h2><input type="text" id="reciptitle" >
+                <span class="reciptitleerror">type only text</span>
+            </div>
+
+        </div>
+        <div class="check">
+            <div>
+                <h2>Type of Standing Order.</h2>
+            </div>
+            <div class="check__item">
+                <input type="checkbox" name="checkbox">
+                <h2>Fixed Amount</h2>
+                <input type="checkbox" name="checkbox">
+                <h2>Sweep Out*</h2>
+                <input type="checkbox" name="checkbox">
+                <h2>Sweep In *</h2>
+
+            </div>
+
+        </div>
+        <div class="desc">
+            <h2>*Available for transfers within Mashreq Bank Oman Branch only</h2>
+        </div>
+        <div class="purpose">
+            <h2>Purpose of Transfer</h2><input type="text" id="purpose">
+        </div>
+        <div class="transferlimit">
+            <div>
+                <h2>Transfer/Limit Amount**</h2><input type="text" id="limitamount">
+                <span class="limitamounterror">Amout contains only number</span>
+            </div>
+            <div>
+                <h2>CCY <input type="text" id="ccy"></h2>
+            </div>
+        </div>
+        <div class="inwords">
+            <h2>In words</h2><input type="text">
+        </div>
+        <div class="desc">
+            <h2>**For Sweep In and Sweep Out, this amount is the target balance in the Donor or Recipient accounts
+                respectively.</h2>
+        </div>
+        <div class="check2">
+            <div>
+                <h2>Execution Cycle.</h2>
+            </div>
+            <div class="check2__item">
+                <div><input type="checkbox" name="checkbox">
+                    <h2>Daily</h2>
+                </div>
+                <div><input type="checkbox" name="checkbox">
+                    <h2>Weekly</h2>
+                </div>
+                <div><input type="checkbox" name="checkbox">
+                    <h2>Monthly</h2>
+                </div>
+                <div><input type="checkbox" name="checkbox">
+                    <h2>Others</h2>
+                </div>
+                <input type="text">
+            </div>
+        </div>
+        <div class="check3">
+            <div>
+                <h2>Execution Time</h2>
+            </div>
+            <div class="check3__item">
+                <input type="checkbox" name="checkbox">
+                <h2>Beginning of Day (BOD)</h2>
+                <input type="checkbox" name="checkbox">
+                <h2>End of Day (BOD)</h2>
+
+            </div>
+        </div>
+
+        <div class="check4">
+            <div>
+                <h2>Start Date</h2>
+            </div>
+            <div class="check4__item">
+                <div>
+                    <input type="text" placeholder="D">
+                    <input type="text" placeholder="D">
+                </div>
+                <div>
+                    <input type="text" placeholder="M">
+                    <input type="text" placeholder="M">
+                </div>
+                <div>
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                </div>
+            </div>
+        </div>
+        <div class="check5">
+            <div>
+                <h2>Stop Date</h2>
+            </div>
+            <div class="check5__item">
+                <div>
+                    <input type="text" placeholder="D">
+                    <input type="text" placeholder="D">
+                </div>
+                <div>
+                    <input type="text" placeholder="M">
+                    <input type="text" placeholder="M">
+                </div>
+                <div>
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                    <input type="text" placeholder="Y">
+                </div>
+                <div class="check5__item__textinput">
+                    <h2>(or) No. of Executions</h2>
+                    <input type="text">
+                </div>
+            </div>
+        </div>
+        <div class="sodesc">
+            <h2>Standing Order Description/Details</h2><input type="text">
+        </div>
+
+        <div class="transtitle">
+            <h3>For Transfer to Other Banks</h3>
+        </div>
+
+        <div class="trans__container"> 
+            <div class="trans__container__item" style="gap: 8px;">
+                <h2>Beneficiary´s Name:</h2><input type="text" style="width: 468px; height: 13px;" id="Benefname">
+                <span class="Benefnameerror">Beneficiary Name Contais Text only</span>
+            </div>
+            <div class="trans__container__item" style="gap: 45px;">
+                <h2>Address:</h2><input type="text" style="width: 468px; height: 13px;">
+            </div>
+            <div class="trans__container__item" style="gap:10px;">
+                <h2>Account with Bank:</h2><input type="text" style="width: 296px; height: 13px;">
+                <h2>SWIFT Code</h2><input type="text" style="width: 114px; height: 13px;">
+            </div>
+            <div class="trans__container__item" style="gap:14px;">
+                <h2>Correspondent Bank Details (Optional)</h2><input type="text" style="width: 224px; height: 13px;">
+                <h2>SWIFT Code</h2><input type="text" style="width: 114px; height: 13px;">
+            </div>
+            <div class="trans__container__item" style="gap: 25px;">
+                <h2>Branch Address:</h2><input type="text" style="width: 468px; height: 13px;">
+            </div>
+            <div class="trans__container__item" style="gap:10px;">
+                <h2 style="padding-right: 55px;">City</h2><input type="text" style="width: 214px; height: 13px;">
+                <h2>Country</h2><input type="text" style="width: 208px; height: 13px;">
+            </div>
+        </div>
+        <div class="footer">
+            <div>
+                <p>Please debit the amount equivalent/counter value plus all your charges to my/our Account on due date.</p>
+                <p>I/We agree to keep sufficient balance in my/our Account for the captioned Standing Order and you are not under any obligation to effect the payment and inform me if the Account has insufficient funds.</p>
+            </div>
+
+        </div>
+        <div class="footer__sign">
+            <div class="footer__sign__name">
+                <div class="footer__sign__name__item" style="gap: 30px;">
+                    <h2>Name(s) of Applicant(s)</h2><input type="text" style="width: 440px; height: 13px;">
+                </div>
+            </div>
+
+        </div>
+        <div class="footer_signature">
+            <h2>Signature(s)</h2>
+        </div>
+
+        <div class="footer__detail1">
+            
+            <h2>Mashreq Bank Oman Branch</h2>
+        </div>
+        <div class="footer__detail2">
+            <h2>(1 of 1)</h2>
+            
+        </div>
+        <div class="version">
+            <h2>Oman-SI/v1.0/01/2025</h2>
+        </div>
+        <div class="button" id="submit">
+            <Button>Submit</Button>
+        </div>
+    </div>
+
+<script src="form1.js"></script>
+
+</body>
+
+</html>
