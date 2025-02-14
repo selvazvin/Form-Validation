@@ -50,6 +50,35 @@ submit.addEventListener("click", function () {
 
     var validate = true
 
+    let radioContainer1 = document.querySelector(".check__item");
+    let selectedRadio1 = document.querySelector('input[name="check1"]:checked');
+    if (!selectedRadio1) {
+        radioContainer1.style.border = "2px solid red";
+        validate = false;
+    } else {
+        radioContainer1.style.border = "none";
+    }
+    
+
+    let radioContainer2 = document.querySelector(".check2__item");
+    let selectedRadio2 = document.querySelector('input[name="check2"]:checked');
+    if (!selectedRadio2) {
+        radioContainer2.style.border = "2px solid red";
+        validate = false;
+    } else {
+        radioContainer2.style.border = "none";
+    }
+    
+    let radioContainer3 = document.querySelector(".check3__item");
+    let selectedRadio3 = document.querySelector('input[name="check3"]:checked');
+    if (!selectedRadio3) {
+        radioContainer3.style.border = "2px solid red";
+        validate = false;
+    } else {
+        radioContainer3.style.border = "none";
+    }
+
+
     if (donoraccnoRegex.test(donoraccno.value) == false) {
         document.querySelector(".donoraccnoerror").style.display = "inline"
         validate = false
