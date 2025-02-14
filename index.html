@@ -18,7 +18,7 @@
     <div class="formsection">
 
         <div class="logoimage">
-            <img src="./Image/Masreq Logo-01.png" alt="">
+            <img src="./Image/VS Logo-01.png" alt="">
         </div>
         <div class="heading">
             <h5 class="">Request for Standing Order (Account to Account)</h5>
@@ -29,7 +29,7 @@
                 <h2>Donor IBAN/Account No.</h2><input type="text" id="donoraccno">
                 <span class="donoraccnoerror">Account Number required minimum 15 digit</span>
                 <h2>Title</h2><input type="text" id="donortitle">
-                <span class="donortitleerror">type only text</span>
+                <span class="donortitleerror">Title Contais Text only</span>
                 
             </div><br>
 
@@ -37,7 +37,7 @@
                 <h2>Recipient IBAN/Account No.</h2><input type="text" id="recipaccno">
                 <span class="recipaccnoerror">type valid account number</span>
                 <h2>Title</h2><input type="text" id="reciptitle" >
-                <span class="reciptitleerror">type only text</span>
+                <span class="reciptitleerror">Title Contais Text only</span>
             </div>
 
         </div>
@@ -63,6 +63,7 @@
         </div>
         <div class="purpose">
             <h2>Purpose of Transfer</h2><input type="text" id="purpose">
+            <span class="purposeerror">Required field</span>
         </div>
         <div class="transferlimit">
             <div>
@@ -73,8 +74,9 @@
                 <h2>CCY <input type="text" id="ccy"></h2>
             </div>
         </div>
-        <div class="inwords">
-            <h2>In words</h2><input type="text">
+        <div class="inwords"> 
+            <h2>In words</h2><input type="text" id="inwords">
+            <span class="inwordserror">Type Amout in words</span>
         </div>
         <div class="desc">
             <h2>**For Sweep In and Sweep Out, this amount is the target balance in the Donor or Recipient accounts
@@ -160,7 +162,8 @@
             </div>
         </div>
         <div class="sodesc">
-            <h2>Standing Order Description/Details</h2><input type="text">
+            <h2>Standing Order Description/Details</h2><input type="text" id="sodesc">
+            <span class="sodescerror">Required Field</span>
         </div>
 
         <div class="transtitle">
@@ -173,11 +176,14 @@
                 <span class="Benefnameerror">Beneficiary Name Contais Text only</span>
             </div>
             <div class="trans__container__item" style="gap: 45px;">
-                <h2>Address:</h2><input type="text" style="width: 468px; height: 13px;">
+                <h2>Address:</h2><input type="text" style="width: 468px; height: 13px;" id="address">
+                <span class="addresserror">Required Address Field</span>
             </div>
             <div class="trans__container__item" style="gap:10px;">
-                <h2>Account with Bank:</h2><input type="text" style="width: 296px; height: 13px;">
-                <h2>SWIFT Code</h2><input type="text" style="width: 114px; height: 13px;">
+                <h2>Account with Bank:</h2><input type="text" style="width: 296px; height: 13px;" id="accbank">
+                <span class="accbankerror">Required Bank Name</span>
+                <h2>SWIFT Code</h2><input type="text" style="width: 114px; height: 13px;" id="swift">
+                <span class="swifterror">Required Swift Code</span>
             </div>
             <div class="trans__container__item" style="gap:14px;">
                 <h2>Correspondent Bank Details (Optional)</h2><input type="text" style="width: 224px; height: 13px;">
@@ -201,7 +207,8 @@
         <div class="footer__sign">
             <div class="footer__sign__name">
                 <div class="footer__sign__name__item" style="gap: 30px;">
-                    <h2>Name(s) of Applicant(s)</h2><input type="text" style="width: 440px; height: 13px;">
+                    <h2>Name(s) of Applicant(s)</h2><input type="text" style="width: 440px; height: 13px;" id="name">
+                    <span class="nameerror">Required Applicant Name</span>
                 </div>
             </div>
 
@@ -212,14 +219,14 @@
 
         <div class="footer__detail1">
             
-            <h2>Mashreq Bank Oman Branch</h2>
+            <h2>created by Selva</h2>
         </div>
         <div class="footer__detail2">
             <h2>(1 of 1)</h2>
             
         </div>
         <div class="version">
-            <h2>Oman-SI/v1.0/01/2025</h2>
+            <h2>Selva-SI/v1.0/01/2025</h2>
         </div>
         <div class="button" id="submit">
             <Button>Submit</Button>

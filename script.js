@@ -13,6 +13,12 @@ submit.addEventListener("click", function () {
     var reciptitleRegex = /^[a-z A-Z]+$/
     var limitamountRegex = /^[0-9]+$/
     var BenefnameRegex = /^[a-z A-Z]+$/
+    var inwordsRegex = /^[a-z A-z]+$/
+    var purposeRegex=/^[a-z A-Z 0-9]+/
+    var addressRegex=/^[a-z A-z 0-9 . ,/]+/
+    var accbankRegex=/^[a-z A-z]+/
+    var swiftRegex=/^[a-z A-Z 0-9]+/
+    var nameRegex=/^[a-z A-Z]+/
 
     var d1Regex = /^[0-3]/
     var d2Regex = /^[0-9]/
@@ -29,6 +35,12 @@ submit.addEventListener("click", function () {
     var reciptitle = document.getElementById("reciptitle")
     var limitamount = document.getElementById("limitamount")
     var Benefname = document.getElementById("Benefname")
+    var inwords=document.getElementById("inwords")
+    var purpose=document.getElementById("purpose")
+    var address=document.getElementById("address")
+    var accbank=document.getElementById("accbank")
+    var swift=document.getElementById("swift")
+    var name=document.getElementById("name")
 
     var sd1 = document.getElementById("sd1")
     var sd2 = document.getElementById("sd2")
@@ -47,6 +59,8 @@ submit.addEventListener("click", function () {
     var ey2 = document.getElementById("ey2")
     var ey3 = document.getElementById("ey3")
     var ey4 = document.getElementById("ey4")
+
+
 
     var validate = true
 
@@ -73,6 +87,7 @@ submit.addEventListener("click", function () {
     let selectedRadio3 = document.querySelector('input[name="check3"]:checked');
     if (!selectedRadio3) {
         radioContainer3.style.border = "2px solid red";
+        
         validate = false;
     } else {
         radioContainer3.style.border = "none";
@@ -123,6 +138,64 @@ submit.addEventListener("click", function () {
         document.querySelector(".Benefnameerror").style.display = "none"
     }
 
+    if(purposeRegex.test(purpose.value)==false)
+    {
+        document.querySelector(".purposeerror").style.display="inline"
+        validate=false
+    }
+    else
+    {
+        document.querySelector(".purposeerror").style.display="none"
+    }
+
+    if(inwordsRegex.test(inwords.value)==false)
+    {
+        document.querySelector(".inwordserror").style.display="inline"
+        validate=false
+    }
+    else
+    {
+        document.querySelector(".inwordserror").style.display="none"
+    }
+    if(addressRegex.test(address.value)==false)
+    {
+        document.querySelector(".addresserror").style.display="inline"
+        validate=false
+    }
+    else
+    {
+        document.querySelector(".addresserror").style.display="none"
+    }
+    if(accbankRegex.test(accbank.value)==false)
+    {
+        document.querySelector(".accbankerror").style.display="inline"
+        validate=false
+    }
+    else
+    {
+        document.querySelector(".accbankerror").style.display="none"
+    }
+
+    if(swiftRegex.test(swift.value)==false)
+    {
+        document.querySelector(".swifterror").style.display="inline"
+        validate=false
+    }
+    else
+    {
+        document.querySelector(".swifterror").style.display="none"
+    }
+
+    if(nameRegex.test(name.value)==false)
+    {
+        document.querySelector(".nameerror").style.display="inline"
+    }
+    else
+    {
+        document.querySelector(".nameerror").style.display="none"
+    }
+
+    // start data
     if (d1Regex.test(sd1.value) == false) {
         document.getElementById("sd1").style.borderColor = "red"
         validate = false
