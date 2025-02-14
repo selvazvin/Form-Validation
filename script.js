@@ -189,6 +189,7 @@ submit.addEventListener("click", function () {
     if(nameRegex.test(name.value)==false)
     {
         document.querySelector(".nameerror").style.display="inline"
+        validate=false
     }
     else
     {
