@@ -23,7 +23,7 @@ submit.addEventListener("click", function () {
     var d1Regex = /^[0-3]/
     var d2Regex = /^[0-9]/
     var m1Regex = /^[0-1]/
-    var m2Regex = /^[0-2]/
+    var m2Regex = /^[0-9]/
     var y1Regex = /^[0-2]/
     var y2Regex = /^[0-9]/
     var y3Regex = /^[0-9]/
